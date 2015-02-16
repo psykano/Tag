@@ -234,6 +234,9 @@
     <ClCompile Include="src\bullet\LinearMath\btVector3.cpp" />
     <ClCompile Include="src\game\BulletModel.cpp" />
     <ClCompile Include="src\game\BulletPhysicsEngine.cpp" />
+    <ClCompile Include="src\game\ClientEventSystem.cpp" />
+    <ClCompile Include="src\game\PlayerController.cpp" />
+    <ClCompile Include="src\game\ServerEventSystem.cpp" />
     <ClCompile Include="src\game\TagGame.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
@@ -475,11 +478,14 @@
     <ClInclude Include="src\bullet\vectormath\vmInclude.h" />
     <ClInclude Include="src\game\BulletModel.h" />
     <ClInclude Include="src\game\BulletPhysicsEngine.h" />
+    <ClInclude Include="src\game\ClientEventSystem.h" />
     <ClInclude Include="src\game\ControllerInterface.h" />
-    <ClInclude Include="src\game\EventInterface.h" />
+    <ClInclude Include="src\game\EventSystemInterface.h" />
     <ClInclude Include="src\game\GameInterface.h" />
     <ClInclude Include="src\game\ModelInterface.h" />
     <ClInclude Include="src\game\PhysicsEngineInterface.h" />
+    <ClInclude Include="src\game\PlayerController.h" />
+    <ClInclude Include="src\game\ServerEventSystem.h" />
     <ClInclude Include="src\game\TagGame.h" />
     <ClInclude Include="src\ofApp.h" />
   </ItemGroup>

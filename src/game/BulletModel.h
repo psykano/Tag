@@ -9,6 +9,7 @@ public:
 	void setup(btCollisionShape* _collisionShape, btMotionState* _motionState, btRigidBody::btRigidBodyConstructionInfo &rigidBodyCI);
 	virtual void cleanup();
 	virtual void collidedWith(ModelInterface* model);
+	virtual void applyTorque(float x, float y, float z);
 	btRigidBody* getRigidBody();
 
 private:

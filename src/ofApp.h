@@ -33,4 +33,6 @@ class ofApp : public ofBaseApp{
 		bool downKey;
 		bool leftKey;
 		bool rightKey;
+		float prevMoveX;
+		float prevMoveZ;
 };

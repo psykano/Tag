@@ -26,6 +26,10 @@ void BulletModel::collidedWith(ModelInterface* model) {
 	// need to deal with state here.... how *** TODO ***
 }
 
+void BulletModel::applyTorque(float x, float y, float z) {
+	rigidBody->applyTorque(btVector3(x, y, z));
+}
+
 btRigidBody* BulletModel::getRigidBody() {
 	return rigidBody;
 }

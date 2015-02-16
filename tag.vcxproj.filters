@@ -151,6 +151,9 @@
     <ClCompile Include="src\game\BulletPhysicsEngine.cpp" />
     <ClCompile Include="src\BulletDebugDrawer.cpp" />
     <ClCompile Include="src\game\BulletModel.cpp" />
+    <ClCompile Include="src\game\ClientEventSystem.cpp" />
+    <ClCompile Include="src\game\ServerEventSystem.cpp" />
+    <ClCompile Include="src\game\PlayerController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -395,7 +398,6 @@
     <ClInclude Include="src\bullet\btBulletDynamicsCommon.h" />
     <ClInclude Include="src\bullet\Bullet-C-Api.h" />
     <ClInclude Include="src\game\ControllerInterface.h" />
-    <ClInclude Include="src\game\EventInterface.h" />
     <ClInclude Include="src\game\ModelInterface.h" />
     <ClInclude Include="src\game\GameInterface.h" />
     <ClInclude Include="src\game\TagGame.h" />
@@ -403,6 +405,10 @@
     <ClInclude Include="src\game\PhysicsEngineInterface.h" />
     <ClInclude Include="src\BulletDebugDrawer.h" />
     <ClInclude Include="src\game\BulletModel.h" />
+    <ClInclude Include="src\game\EventSystemInterface.h" />
+    <ClInclude Include="src\game\ClientEventSystem.h" />
+    <ClInclude Include="src\game\ServerEventSystem.h" />
+    <ClInclude Include="src\game\PlayerController.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

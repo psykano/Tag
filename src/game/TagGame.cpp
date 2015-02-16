@@ -1,13 +1,22 @@
 #include "TagGame.h"
 #include "BulletPhysicsEngine.h"
 #include "BulletModel.h"
+#include "ClientEventSystem.h"
+#include "ServerEventSystem.h"
+#include "PlayerController.h"
 
-TagGame::TagGame() {
+TagGame::TagGame(bool server) {
 	physics = new BulletPhysicsEngine();
+	if (server) {
+		eventSystem = new ServerEventSystem();
+	} else {
+		eventSystem = new ClientEventSystem();
+	}
 }
 
 TagGame::~TagGame() {
 	delete physics;
+	delete eventSystem;
 }
 
 void TagGame::setup() {
@@ -107,6 +116,11 @@ void TagGame::setup() {
 
 		// For the collision callbacks
 		model->getRigidBody()->setCollisionFlags(model->getRigidBody()->getCollisionFlags() | btCollisionObject::CF_CUSTOM_MATERIAL_CALLBACK);
+
+		// Give the model a controller so we can play with it
+		PlayerController* controller = new PlayerController();
+		playerControllers.push_back(controller);
+		controller->attachToModel(model);
 	}
 }
 
@@ -125,4 +139,8 @@ void TagGame::step(float dt) {
 
 const PhysicsEngineInterface* TagGame::getPhysicsEngine() {
 	return physics;
+}
+
+EventSystemInterface* TagGame::getEventSystem() {
+	return eventSystem;
 }
